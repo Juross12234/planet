@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: white;
+            text-align: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+        }
+        .get-started-container, .main-form, .loading-screen {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+            display: none;
+        }
+
+        img{
+            border-radius: 40px;
+            box-shadow: 0px 0px 10px black;
+
+        }
+        .active {
+            display: block;
+        }
+        button {
+            background: #ff8c00;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #ff6700;
+        }
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            width: 80%;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+        }
+        .error {
+            border: 2px solid red;
+            background: rgba(255, 0, 0, 0.1);
+        }
+        .loading-screen {
+            text-align: center;
+        }
+        .loading-screen img {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="get-started-container active" id="get-started-container">
+            <img src="logo/silhouette-planet-with-ring-space-black-color-only_925376-77903.avif" width="100px" alt="Logo">
+            <h2>Welcome to the Space Explorer</h2>
+            <button onclick="showMainForm()">Get Started</button>
+        </div>
+
+        <div class="main-form" id="main-form">
+            <h2>Main Form</h2>
+            <label for="user-input">Enter your name:</label>
+            <input type="text" id="user-input" placeholder="Type your name...">
+            <button onclick="submitForm()">Submit</button>
+        </div>
+
+        <div class="loading-screen" id="loading-screen">
+            <img src="logo/silhouette-planet-with-ring-space-black-color-only_925376-77903.avif" width="150" alt="Logo">
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <script>
+        function showMainForm() {
+            document.getElementById("get-started-container").classList.remove("active");
+            document.getElementById("main-form").classList.add("active");
+        }
+
+        function submitForm() {
+            let userInput = document.getElementById("user-input");
+            let nameValue = userInput.value.trim();
+            
+            if (nameValue === "") {
+                userInput.classList.add("error");
+                return;
+            }
+
+            localStorage.setItem("userName", nameValue);
+            
+           
+
+            userInput.classList.remove("error");
+            document.getElementById("main-form").classList.remove("active");
+            document.getElementById("loading-screen").classList.add("active");
+            
+            setTimeout(() => {
+                window.location.href = "home.html"; // Redirect to index.html after 10 seconds
+            }, 5000); // Wait for 10 seconds
+        }
+    </script>
+</body>
+</html>
+

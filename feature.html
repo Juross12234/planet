@@ -1,0 +1,265 @@
+<!-- feature.html (Feature Page) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav class="bottom-nav">
+        <a href="home.html">Home</a>
+        <a href="feature.html" class="active">Explore</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <div class="content">
+        <h1>Feature</h1>
+        <p>Welcome to the Feature Page</p>
+    </div>
+
+    <div class="feature-section">
+        <h2>Planet</h2>
+
+        <div class="feature-item">
+            <img src="image/SEI_113160266.webp" class="im" alt="Feature 1">
+            <p>Neptune</p>
+            <button class="explore-btn">Explore</button>
+            <img src="image/red-rocket-png-5 (1).png" class="rocket">
+        </div>
+
+        <div class="feature-item">
+            <img src="image/licensed-image.jfif" class="im" alt="Feature 2">
+            <p>Venus</p>
+            <button class="explore-btn">Explore</button>
+            <img src="image/red-rocket-png-5 (1).png" class="rocket">
+        </div>
+
+        <div class="feature-item">
+            <img src="image/heic2312a.jpg" class="im" alt="Feature 3">
+            <p>Saturn</p>
+            <button class="explore-btn">Explore</button>
+            <img src="image/red-rocket-png-5 (1).png" class="rocket">
+        </div>
+
+        <div class="feature-item">
+            <img src="image/spectra-mercury.webp" class="im" alt="Feature 4">
+            <p>Mercury</p>
+            <button class="explore-btn">Explore</button>
+            <img src="image/red-rocket-png-5 (1).png" class="rocket">
+        </div>
+
+        <div class="feature-item">
+            <img src="image/uranus-pia18182-1920x640-1-jpg.jpg" class="im" alt="Feature 5">
+            <p>Uranus</p>
+            <button class="explore-btn">Explore</button>
+            <img src="image/red-rocket-png-5 (1).png" class="rocket">
+        </div>
+
+        <div class="feature-item">
+            <img src="image/pia03149-copy.webp" class="im" alt="Feature 6">
+            <p>Sun</p>
+            <button class="explore-btn">Explore</button>
+            <img src="image/red-rocket-png-5 (1).png" class="rocket">
+        </div>
+
+        <div class="feature-item">
+            <img src="image/earth-1-jpg.webp" class="im" alt="Feature 7">
+            <p>Earth</p>
+            <button class="explore-btn">Explore</button>
+            <img src="image/red-rocket-png-5 (1).png" class="rocket">
+        </div>
+    </div>
+
+    <div class="comment-1">
+        
+        <p style="font-size: 13px;">Besides the eight main planets, there are also dwarf planets in our Solar System. These are smaller than regular planets but have enough gravity to form a roughly spherical shape. Here are some of the most well-known dwarf planets:</p>
+        
+    </div>
+
+    
+
+    <div class="feature-section">
+
+    <h3>Dwarft Planets</h3>
+
+    <div class="feature-item">
+        <img src="image/DoZSMXF87kCuzbymsuEFHo.jpg" alt="Feature 3">
+        <p>Pluto</p>
+        <button>Explore</button>
+    </div>
+
+    <div class="feature-item">
+        <img src="image/qnft8kRfeGWWLgaygo4fb9.jpg" alt="Feature 3">
+        <p>Care</p>
+        <button>Explore</button>
+    </div>
+
+    <div class="feature-item">
+        <img src="image/eris_th.jpg" alt="Feature 3">
+        <p>Eris</p>
+        <button>Explore</button>
+    </div>
+
+    <div class="feature-item">
+        <img src="image/FLYgpN3GGHzkyNY8wr8B2M.jpg" alt="Feature 3">
+        <p>Haumea</p>
+        <button>Explore</button>
+    </div>
+
+    <div class="feature-item">
+        <img src="image/makemake.webp" alt="Feature 3">
+        <p>Makemake</p>
+        <button>Explore</button>
+    </div>
+
+    </div>
+
+    
+    <div class="comment-section">
+        <h2>Comments</h2>
+        <textarea placeholder="Leave a comment..."></textarea>
+        <button>Submit</button>
+    </div>
+</div>
+
+
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+
+<script>
+
+// Function to return different forms for each planet with 3D animation
+function getPlanetForm(planet) {
+            let forms = {
+                "Neptune": `
+                    <div class="form-container">
+                        <h2>Welcome to Neptune</h2>
+                        <p>Neptune is the farthest planet from the Sun. It has strong winds and a deep blue color.</p>
+                        <div class="planet-container">
+                            <div class="planet" style="background-image: url('planet_png/pngtree-beautiful-planet-neptune-png-image_11898585.png');"></div>
+                        </div>
+                        <input type="text" placeholder="Enter your name">
+                        <button>Submit</button>
+                    </div>
+                `,
+                "Venus": `
+                    <div class="form-container">
+                        <h2>Welcome to Venus</h2>
+                        <p>Venus is the hottest planet in the Solar System, with thick clouds of sulfuric acid.</p>
+                        <div class="planet-container">
+                            <div class="planet" style="background-image: url('planet_png/pngtree-venus-planet-on-transparent-background-png-image_13144097.png');"></div>
+                        </div>
+                        <input type="text" placeholder="Enter your name">
+                        <button>Submit</button>
+                    </div>
+                `,
+                "Saturn": `
+                    <div class="form-container">
+                        <h2>Welcome to Saturn</h2>
+                        <p>Saturn is famous for its beautiful rings made of ice and rock particles.</p>
+                        <div class="planet-container">
+                            <div class="planet" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg');"></div>
+                        </div>
+                        <input type="text" placeholder="Enter your name">
+                        <button>Submit</button>
+                    </div>
+                `,
+                "Mercury": `
+                    <div class="form-container">
+                        <h2>Welcome to Mercury</h2>
+                        <p>Mercury is the smallest planet and has extreme temperatures between day and night.</p>
+                        <div class="planet-container">
+                            <div class="planet" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/30/Mercury_in_color_-_Prockter07_centered.jpg');"></div>
+                        </div>
+                        <input type="text" placeholder="Enter your name">
+                        <button>Submit</button>
+                    </div>
+                `,
+                "Uranus": `
+                    <div class="form-container">
+                        <h2>Welcome to Uranus</h2>
+                        <p>Uranus is unique because it rotates on its side and has a pale blue-green color.</p>
+                        <div class="planet-container">
+                            <div class="planet" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg');"></div>
+                        </div>
+                        <input type="text" placeholder="Enter your name">
+                        <button>Submit</button>
+                    </div>
+                `,
+                "Sun": `
+                    <div class="form-container">
+                        <h2>Welcome to the Sun</h2>
+                        <p>The Sun is the center of our Solar System and provides energy for all life on Earth.</p>
+                        <div class="planet-container">
+                            <div class="planet" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_surface.jpg');"></div>
+                        </div>
+                        <input type="text" placeholder="Enter your name">
+                        <button>Submit</button>
+                    </div>
+                `,
+                "Earth": `
+                    <div class="form-container">
+                        <h2>Welcome to Earth</h2>
+                        <p>Earth is our home, the only planet known to support life in the universe.</p>
+                        <div class="planet-container">
+                            <div class="planet" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg');"></div>
+                        </div>
+                        <input type="text" placeholder="Enter your name">
+                        <button>Submit</button>
+                    </div>
+                `
+            };
+
+            return forms[planet] || "<h2>Form not found!</h2>";
+        }
+
+        // Function to load the selected planet form
+        function loadPlanetForm(planet) {
+            document.getElementById("form-content").innerHTML = getPlanetForm(planet);
+        }
+
+</script>
+
+<!-- Buttons to Explore Planets -->
+<button onclick="loadPlanetForm('Neptune')">Explore Neptune</button>
+<button onclick="loadPlanetForm('Venus')">Explore Venus</button>
+<button onclick="loadPlanetForm('Saturn')">Explore Saturn</button>
+<button onclick="loadPlanetForm('Mercury')">Explore Mercury</button>
+<button onclick="loadPlanetForm('Uranus')">Explore Uranus</button>
+<button onclick="loadPlanetForm('Sun')">Explore Sun</button>
+<button onclick="loadPlanetForm('Earth')">Explore Earth</button>
+
+    
+<script>
+    document.getElementById("explore-btn").addEventListener("click", function() {
+        let rocket = document.getElementById("rocket");
+        rocket.classList.add("animate");
+
+        // Remove animation class after animation ends to allow re-click
+        setTimeout(() => {
+            rocket.classList.remove("animate");
+        }, 2000);
+    });
+</script>
+
+
+    <script src="main.js"></script>
+
+</body>
+</html>
+

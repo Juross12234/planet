@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="welcome-container">
+        <h2 id="welcome-message">Welcome, <span id="user-input">Guest</span>!</h2>
+    </div>
+
+
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search for planets in the solar system...">
+        <button onclick="searchAI()">
+            <i class="fas fa-search"></i>
+        </button>
+           
+    </div>
+    
+    <div class="results-form" id="results-form" style="display: none;">
+        <label for="ai-response">Response:</label>
+        <textarea id="ai-response" readonly></textarea>
+    </div>
+    
+
+    
+    <div class="content">
+        <h1>Home</h1>
+        <p>Welcome to the Home Page</p>
+
+
+        <div class="image-gallery">
+            <div class="image-card">
+                <img src="image/solar-system-planets-order-social.webp" alt="Image 1">
+               
+                <p>A planet is a celestial body that orbits a star, is massive enough to be rounded by its own gravity, and has cleared its orbital path of other objects</p>
+                <i class="fa-regular fa-heart heart-icon" onclick="toggleHeart(this)"></i>
+                <i class="fa-regular fa-thumbs-up icon like-icon" onclick="toggleIcon(this)"></i>
+            </div>
+            <div class="image-card">
+                <img src="image/18b84050-58c3-11ef-aebc-6de4d31bf5cd.jpg" alt="Image 2">
+              
+                <p>Mars, the fourth planet from the Sun, is a cold, dusty, desert world known as the "Red Planet" due to its rusty-red appearance caused by iron oxide on its surface. </p>
+                <i class="fa-regular fa-heart heart-icon" onclick="toggleHeart(this)"></i>
+                <i class="fa-regular fa-thumbs-up icon like-icon" onclick="toggleIcon(this)"></i>
+            </div>
+            <div class="image-card">
+                <img src="image/scientists-uncover-evidence-ancient-water-mars-new-findings-reveal-planets-wet-past.jpg" alt="Image 3">
+              
+                <p>The "red planet" refers to Mars, the fourth planet from the Sun, known for its reddish-orange appearance due to iron oxide (rust) on its surface. </p>
+                <i class="fa-regular fa-heart heart-icon" onclick="toggleHeart(this)"></i>
+                <i class="fa-regular fa-thumbs-up icon like-icon" onclick="toggleIcon(this)"></i>
+            </div>
+            <div class="image-card">
+                <img src="image/uVwrSjfVvkGwk9y6zNJMob-1200-80 (1).jpg" alt="Image 4">
+                
+                <p>The sun is a star, specifically a yellow dwarf star, located at the center of our solar system, and it's a giant, glowing ball of hot gas, primarily hydrogen and helium, that provides Earth with light and heat. </p>
+                <i class="fa-regular fa-heart heart-icon" onclick="toggleHeart(this)"></i>
+                <i class="fa-regular fa-thumbs-up icon like-icon" onclick="toggleIcon(this)"></i>
+            </div>
+            <div class="image-card">
+                <img src="image/OSS2-1.jpg" alt="Image 5">
+               
+                <p>A planet is a large, rounded astronomical body that is generally required to be in orbit around a star, stellar remnant, or brown dwarf, and is not one itself.</p>
+                <i class="fa-regular fa-heart heart-icon" onclick="toggleHeart(this)"></i>
+                <i class="fa-regular fa-thumbs-up icon like-icon" onclick="toggleIcon(this)"></i>
+            </div>
+            <div class="image-card">
+                <img src="image/Planets-HERO.webp" alt="Image 6">
+             
+                <p>The temperature at the surface of the Sun is about 10,000 Fahrenheit (5,600 Celsius). The temperature rises from the surface of the Sun inward towards the very hot center of the Sun where it reaches about 27,000,000 Fahrenheit (15,000,000 Celsius).</p>
+                <i class="fa-regular fa-heart heart-icon" onclick="toggleHeart(this)"></i>
+                <i class="fa-regular fa-thumbs-up icon like-icon" onclick="toggleIcon(this)"></i>
+            </div>
+            <div class="image-card">
+                <img src="image/RHiYURLf7bwv2TrTshqpic-1200-80.jpg" alt="Image 7">
+              
+                <p>A planet must have cleared its orbital path of other objects of comparable size, meaning its gravity has pulled in or ejected any other significant bodies in its vicinity. </p>
+            
+
+                    <i class="fa-regular fa-heart heart-icon" onclick="toggleHeart(this)"></i>
+                    <i class="fa-regular fa-thumbs-up icon like-icon" onclick="toggleIcon(this)"></i>
+
+            
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+
+    
+    <nav class="bottom-nav">
+        <a href="home.html" class="active">Home</a>
+        <a href="feature.html">Explore</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const storedName = localStorage.getItem("userName");
+            if (storedName) {
+                document.getElementById("user-input").textContent = storedName;
+            }
+        });
+    </script>
+
+
+    <script>
+
+            function searchAI() {
+                // Get user input and convert it to lowercase
+                let input = document.getElementById("search-input").value.trim().toLowerCase();
+                let responseBox = document.getElementById("ai-response");
+                let resultsForm = document.getElementById("results-form");
+
+                // Search the database
+                if (aiDatabase[input]) {
+                    responseBox.value = aiDatabase[input]; // Display the result
+                } else {
+                    responseBox.value = "❌ No information found. Try searching for planets, space objects, or astronomical terms.";
+                }
+
+                // Show the results form if input is provided
+                resultsForm.style.display = input ? "block" : "none";
+            }
+
+            // Allow "Enter" key to trigger the search
+            document.getElementById("search-input").addEventListener("keypress", function(event) {
+                if (event.key === "Enter") {
+                    searchAI();
+                }
+            });
+
+    </script>
+
+    <script src="main.js"></script>
+    
+</body>
+</html>
+
